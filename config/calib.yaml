@@ -1,0 +1,52 @@
+lidar_camera_calib:
+    ros__parameters:
+        # Data path. adjust them!
+        # image_file: "/home/hk/Project/biaoding/online-calib/lidar_camera_calib/src/lidar_camera_calib/data/PCD and images-20230320T061853Z-001/PCD and images/bag_1/img.png"
+        # pcd_file: "/home/hk/Project/biaoding/online-calib/lidar_camera_calib/src/lidar_camera_calib/data/PCD and images-20230320T061853Z-001/PCD and images/bag_1/map.pcd"
+        # result_file: "/home/hk/Project/biaoding/online-calib/lidar_camera_calib/src/lidar_camera_calib/result/extrinsic_result.txt"
+
+        #数字卵生
+        image_file: "/media/hk/HongKong/test_data/livox_camera_calib_data/shuziluansheng/test.png"
+        pcd_file: "/media/hk/HongKong/test_data/livox_camera_calib_data/shuziluansheng/bagtopcd_ascii.pcd"
+        result_file: "/home/hk/Project/biaoding/online-calib/lidar_camera_calib/src/lidar_camera_calib/result/extrinsic_result.txt"
+
+        #adastec
+        # image_file: "/media/hk/HongKong/test_data/livox_camera_calib_data/adastec/adastec.png"
+        # pcd_file: "/media/hk/HongKong/test_data/livox_camera_calib_data/adastec/adastec_cut.pcd"
+        # result_file: "/home/hk/Project/biaoding/online-calib/lidar_camera_calib/src/lidar_camera_calib/result/extrinsic_result.txt"
+
+        #原始作者
+        # image_file: "/media/hk/HongKong/test_data/livox_camera_calib_data/origin_author/0.png"
+        # pcd_file: "/media/hk/HongKong/test_data/livox_camera_calib_data/origin_author/0.pcd"
+        # result_file: "/home/hk/Project/biaoding/online-calib/lidar_camera_calib/src/lidar_camera_calib/result/extrinsic_result.txt"
+
+        # Camera Parameters. Adjust them!
+        # camera_matrix: [914.3226318359375, 0.0, 633.5563354492188, 
+        #                 0.0, 914.1400756835938, 373.4688415527344,
+        #                 0.0, 0.0, 1.0]
+        # dist_coeffs: [0.0, 0.0, 0.0, 0.0, 0.0]
+
+        #自动驾驶数字卵生
+        camera_matrix: [1201.83, 0.0, 1022.68, 
+                        0.0, 1196.92, 753.325,
+                        0.0, 0.0, 1.0]
+        dist_coeffs: [-0.10194, 0.080579, 0.000615, 0.000138, 0.0]
+
+        #adastec
+        # camera_matrix: [1072.2788112985072, 0.0, 719.3970312009722, 
+        #                 0.0, 1078.6493106810844, 409.12502431736334,
+        #                 0.0, 0.0, 1.0]
+        # dist_coeffs: [0.0, 0.0, 0.0, 0.0, 0.0]
+        # dist_coeffs: [-29.423466649562574, 372.056690736772, -0.002197763252790095, 0.0031274562847383638, 778.3053187619528]
+
+        #原始作者
+        # camera_matrix: [1364.45, 0.0,      958.327,
+        #                 0.0,     1366.46,  535.074,
+        #                 0.0,     0.0,      1.0     ]
+        # dist_coeffs: [0.0958277, -0.198233, -0.000147133, -0.000430056, 0.000000]
+
+        # Calibration Parameters.!
+        calib_config_file: "/home/hk/Project/biaoding/online-calib/lidar_camera_calib/src/lidar_camera_calib/config/config_outdoor.yaml"
+        use_rough_calib: true # set true if your initial_extrinsic is bad
+        save_img: true
+        folder: "/home/hk/Project/biaoding/online-calib/lidar_camera_calib/src/lidar_camera_calib/result"
